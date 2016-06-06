@@ -22,6 +22,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// adding some 'fake routes' to my angular modules
+app.use('/angular', express.static(path.join(__dirname, 'node_modules/angular/')));
+app.use('/angular-route', express.static(path.join(__dirname, 'node_modules/angular-route/')));
+app.use('/angular-resource', express.static(path.join(__dirname, 'node_modules/angular-resource/')));
+
+// adding a 'fake route' to jquery, bootstrap needs jquery library
+app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist/')));
+
+// adding a 'fake route' to the bootstrap css mobile first
+app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/')));
+
 app.use('/', routes);
 app.use('/users', users);
 
