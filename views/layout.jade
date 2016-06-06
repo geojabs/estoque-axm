@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app="axmapp")
   head
     title= title
     
@@ -14,3 +14,4 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
+      div(ng-view)
