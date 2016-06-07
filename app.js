@@ -30,8 +30,8 @@ app.use('/angular-resource', express.static(path.join(__dirname, 'node_modules/a
 // adding a 'fake route' to jquery, bootstrap needs jquery library
 app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist/')));
 
-// adding a 'fake route' to the bootstrap css mobile first
-app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/')));
+// adding a 'fake route' to the materialize css mobile first
+app.use('/materialdesign', express.static(path.join(__dirname, 'node_modules/materialize-css/dist/')));
 
 app.use('/', routes);
 app.use('/users', users);
