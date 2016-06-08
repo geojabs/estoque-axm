@@ -1,0 +1,77 @@
+ body {
+	background-color: #b0bec5;
+}
+
+.page-main-title{
+	border-bottom:1px dotted #000;
+	font-family: 'Roboto';
+	font-size: 30px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-left: 3px;
+	margin-top: 10px;
+	padding: 0;
+}
+
+a {
+	color: #00B7FF;
+}
+
+#error-link-return-system{
+	color: blue;
+	display: block;
+	margin-bottom: 10px;
+}
+#error-link-return-system:hover{
+	text-decoration: underline;
+}
+ 
+nav ul li:hover {
+   background-color: rgba(158,158,158, 0.2);
+}
+
+ #content{
+	 padding-left: 240px;
+ }
+
+ .logo-axm{
+	 font-family: 'Roboto', sans-serif;
+	 font-weight: 100;
+	 text-align: center;
+ }
+
+.black-transparent-bg{
+	background-color: rgba(0, 0, 0, 0.8);
+	color:#ccc !important;
+}
+
+.black-transparent-bg input[type="email"], 
+.black-transparent-bg input[type="password"],
+.black-transparent-bg input[type="text"]{
+	color:#ccc !important;
+}
+
+
+table tr:hover td{
+	background-color: rgba(158,158,158, 0.2);
+}
+
+.btn-add{
+	display: block;
+	margin-top: 5%;
+}
+
+.link-return-end-of-form{
+	display: block;
+	margin-top: 10px;
+}
+
+.form-wrapper{
+	padding: 20px;
+}
+
+ @media only screen and (max-width : 992px) {
+	header, main, footer, #content {
+		padding-left: 0;
+	}
+}
