@@ -1,0 +1,44 @@
+<script>
+	 $(function(){
+		$('select').material_select();
+	 });
+</script>
+
+<div class="row">
+	<div class="col s12 m7"><p class="page-main-title">Comprar Produto</p></div>
+</div>
+
+<div class="row">
+	<div class="col s12 m6">
+		<div class="form-wrapper black-transparent-bg">
+			<div class="row">
+				<form class="col s12 m12">
+					<div class="input-field s12 m12">
+						<select>
+							<option value="" disabled selected>Selecione o Fornecedor</option>
+							<option value="1">Option 1</option>
+							<option value="2">Option 2</option>
+						</select>
+					</div>
+					<div class="input-field s12 m12">
+						<select-produto></select-produto>
+					</div>
+					<div class="input-field s12 m12">
+						<input id="quantidade" type="number" max="50" min="1" class="validate">
+						<label for="quantidade">Quantidade: </label>
+					</div>
+					<div class="input-field s12 m12">
+						<input id="vlr_unitario" type="number" class="validate">
+						<label for="vlr_unitario">Valor Unitário: </label>
+					</div>
+					<div class="col s12 m6">
+						<a class="link-return-end-of-form" href="/sistema#/compras">Voltar</a>
+					</div>
+					<div class="col s12 m6">
+						<a class="waves-effect waves-light btn btn-add light-blue darken-4">Salvar</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
