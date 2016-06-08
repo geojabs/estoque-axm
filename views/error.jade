@@ -1,6 +1,34 @@
-extends layout
+meta(name="viewport" content="width=device-width, initial-scale=1")
+script(type="text/javascript", src="/materialdesign/js/materialize.min.js")
+link(rel="stylesheet", href="/stylesheets/layout.css")
+link(rel="stylesheet", href="/materialdesign/css/materialize.min.css")
+link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
 
-block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+div(class="row")
+	div(class="col s12 m12")
+		h3(class="logo-axm") AXM - Fluxo de Estoque de Produtos
+
+div(class="row")
+	div(class="col s12 m4")
+		&nbsp;
+	div(class="col s12 m6")
+		if error.status == 404
+			h1 404
+			h3 Página não encontrada
+			p A página que você tentou acessar não foi encontrada. Por favor, verifique se você digitou o endereço correto. Em caso de dúvidas, entre em contato com o suporte.</p>
+		
+		else if error.status != 404
+			h1= error.status
+			h3 Ocorreu um erro.
+			p Por favor, contate o suporte de sistemas.</p>
+	
+		a(href="/sistema#/", id="error-link-return-system") Voltar ao Sistema
+
+		details
+			summary Informações técnicas para o suporte
+			h5= message
+			h5= error.status
+			pre #{error.stack}
+	
+	div(class="col s12 m2")
+		&nbsp;
