@@ -4,22 +4,25 @@ body{
   	background-position-y: 25%;
 }
 
-h1{
+h1, h4{
 	color: #ccc;
-	border: 1px solid #000;
 	text-align: center;
-	margin-top: 5%;
-	padding: 30px;
 	font-family: "Roboto";
-	font-weight: 300;
-	font-size: 45px;
+    font-weight: 100 !important;
+}
+
+h1{
+    border: 1px solid #000;
+    margin-top: 5% !important;
+    padding: 14px;
+    font-size: 45px !important;
 }
 
 h4{
 	color: #ccc;
 	text-align: center;
 	font-family: "Roboto";
-	font-weight: 300;
+	font-weight: 100;
 }
 
 .black-transparent-bg{
