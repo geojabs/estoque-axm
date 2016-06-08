@@ -1,0 +1,54 @@
+<div class="row">
+	<div class="col s12 m7"><p class="page-main-title">Compras</p></div>
+	<div class="col s12 m5">&nbsp;</div>
+</div>
+
+<div class="row">
+	<div class="col s12 m10">
+		<div class="filter-wrapper black-transparent-bg">
+			<div class="row">
+				<div class="col s12 m8">
+					<div class="input-field">
+						<input type="text" id="filtro_fornecedores" ng-model="nome"  placeholder="Pesquisar...">
+					</div>
+				</div>
+				<div class="col s12 m4">
+					<a href="/sistema#/add-compras" class="waves-effect waves-light btn btn-add light-blue darken-4">Nova Compra</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col s12 m10">
+		<div class="table-wrapper black-transparent-bg">
+			<table class="responsive-table">
+				<thead>
+					<tr>
+						<th data-field="data_compra">Data Compra</th>
+						<th data-field="produto">Produto</th>
+						<th data-field="fornecedor">Fornecedor</th>
+						<th data-field="qtde">Quantidade</th>
+						<th data-field="vlr_unit">Vlr. Unitário</th>
+						<th data-field="total">Total</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr ng-repeat="person in people | filter:nome">
+						<td>{{person.nome}}</td>
+						<td>{{person.telefone}}</td>
+						<td>{{person.email}}</td>
+						<td>{{person.cpf}}</td>
+						<td><a href="#">Editar</td>
+						<td><a href="#">Excluir</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
