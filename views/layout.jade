@@ -1,19 +1,54 @@
 doctype html
 html(ng-app="axmapp")
-  head
-    title= title
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    script(src='/jquery/jquery.min.js')
-    
-    script(src='/angular/angular.min.js')
-    script(src='/angular-route/angular-route.min.js')
-    script(src='/angular-resource/angular-resource.min.js')
-    
-    script(src='/materialdesign/js/materialize.min.js')
-    script(src='/javascripts/scripts.js')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/materialdesign/css/materialize.min.css')
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
-  body
-    block content
-      
+	head
+		title= title
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		script(src='/jquery/jquery.min.js')
+		script(src="/javascripts/sidebarmenu.js")
+		script(src='/angular/angular.min.js')
+		script(src='/angular-route/angular-route.min.js')
+		script(src='/angular-resource/angular-resource.min.js')
+		script(src='/materialdesign/js/materialize.min.js')
+		script(src='/javascripts/axmDirectives.js')
+		script(src='/javascripts/axmapp.js')
+		script(src='/javascripts/comprasController.js')
+		script(src='/javascripts/fornecedoresController.js')
+		script(src='/javascripts/produtosController.js')
+		link(rel='stylesheet', href='/stylesheets/layout.css')
+		link(rel='stylesheet', href='/materialdesign/css/materialize.min.css')
+		link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+	body
+		nav(class="grey darken-3")
+			a(href="/sistema#/", class="brand-logo center logo-axm") AXM
+			ul(id="slide-out", class="side-nav fixed grey darken-4 z-depth-5")
+				li
+					a(href="/sistema#/", class="waves-effect waves-light teal-text text-lighten-4") Início
+				li
+					a(href="/sistema#/produtos", class="waves-effect waves-light teal-text text-lighten-4") Produtos
+				li
+					a(href="/sistema#/fornecedores", class="waves-effect waves-light teal-text text-lighten-4") Fornecedores
+				li
+					a(href="/sistema#/compras", class="waves-effect waves-light teal-text text-lighten-4") Compras
+				li
+					a(href="/sistema#/baixa-estoque", class="waves-effect waves-light teal-text text-lighten-4") Dar Baixa em Estoque
+				li
+					a(href="/", class="waves-effect waves-light teal-text text-lighten-4") Sair
+		
+			ul(id="mobile-nav", class="side-nav grey darken-4")
+				li
+					a(href="/sistema#/", class="teal-text text-lighten-4") Início
+				li
+					a(href="/sistema#/produtos", class="teal-text text-lighten-4") Produtos
+				li
+					a(href="/sistema#/fornecedores", class="teal-text text-lighten-4") Fornecedores
+				li
+					a(href="/sistema#/compras", class="teal-text text-lighten-4") Compras
+				li
+					a(href="/sistema#/baixa-estoque", class="teal-text text-lighten-4") Dar Baixa Estoque
+				li
+					a(href="/", class="teal-text text-lighten-4") Sair
+
+			a(href="#", data-activates="mobile-nav", class="button-collapse")
+				i(class="material-icons") menu
+
+		block content
