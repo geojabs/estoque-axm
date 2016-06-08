@@ -1,0 +1,50 @@
+<div class="row">
+	<div class="col s12 m7"><p class="page-main-title">Fornecedores</p></div>
+</div>
+
+<div class="row">
+	<div class="col s12 m10">
+		<div class="filter-wrapper black-transparent-bg">
+			<div class="row">
+				<div class="col s12 m6">
+					<div class="input-field">
+						<input type="text" id="filtro_fornecedores" ng-model="nome"  placeholder="Filtre por: Nome, telefone, e-mail ou CPF">
+					</div>
+				</div>
+				<div class="col s12 m6">
+					<a href="/sistema#/add-fornecedores" class="waves-effect waves-light btn btn-add light-blue darken-4">Adicionar Novo</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col s12 m10">
+		<div class="table-wrapper black-transparent-bg">
+			<table id="table-fornecedores" class="responsive-table">
+				<thead>
+					<tr>
+						<th data-field="nome">Nome</th>
+						<th data-field="telefone">Telefone</th>
+						<th data-field="email">E-mail</th>
+						<th data-field="cpf">CPF</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr ng-repeat="person in people | filter:nome">
+						<td>{{person.nome}}</td>
+						<td>{{person.telefone}}</td>
+						<td>{{person.email}}</td>
+						<td>{{person.cpf}}</td>
+						<td><a href="#">Editar</td>
+						<td><a href="#">Excluir</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
