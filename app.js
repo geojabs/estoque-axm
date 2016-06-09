@@ -4,8 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var produtos = require('./routes/produtos');
 
 var app = express();
 
@@ -34,7 +35,7 @@ app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist
 app.use('/materialdesign', express.static(path.join(__dirname, 'node_modules/materialize-css/dist/')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/produtos', produtos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

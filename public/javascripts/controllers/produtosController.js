@@ -10,7 +10,7 @@
 		viewModel.product = {};
 		viewModel.saveProduct = function()
 		{
-			var uploadUrl = '/upload';
+			var uploadUrl = '/produtos/save/';
 
 			// Service is used to manage the transactions with the APIs
 			// in a separate file.
