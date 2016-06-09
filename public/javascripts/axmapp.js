@@ -2,7 +2,11 @@
 
 	"use strict";
 
-	angular.module('axmapp', ['axmDirectives', 'ngRoute']).config(function($routeProvider){
+	angular.module('axmapp', [
+		'axmapp.directives.selectProdutoDirective',
+		'axmapp.directives.fileUploadDirective',
+		'ngRoute' ]).config(function($routeProvider){
+		
 		$routeProvider.when('/',{
 			templateUrl: 'partials/dashboard.html'
 		});
