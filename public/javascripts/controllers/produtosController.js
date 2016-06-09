@@ -4,7 +4,7 @@
 	angular.module('axmapp')
 	.controller('ProdutosController', produtosController);
 
-	function produtosController($http, formWithFileUpload)
+	function produtosController($http, $location, formWithFileUpload)
 	{
 		var viewModel = this;
 		viewModel.product = {};
@@ -15,8 +15,9 @@
 			// Service is used to manage the transactions with the APIs
 			// in a separate file.
 			formWithFileUpload.post(uploadUrl, viewModel.product);
+			viewModel.product = {};
+			$location.path('/produtos');
 		}
 	}
-
 
 })();
